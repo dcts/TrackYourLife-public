@@ -15,6 +15,9 @@ Change the values in `public/js/initWebComponents.js` to customize your goals / 
 **public**: all the files hosted on firebase are stored here
 **functions**: all cloud functions are store here (not in use yet, but I set it up since I maybe will use it)
 
+### Database Structure
+create a `users` collection. Initialize a new entry and put the generated userId inside `firebaseInit.js` (line 29). Then make a subcollection of `days`. This subcollection has to have id's in the form `YYYY-MM-DD`.
+
 ### Webcomponents
 Jut trying out.
 - mycard.js -> the card that holds the doughnut chart with the achievements. Click on the chart to increase, click on the card title on top of the card to decrease the amount.
