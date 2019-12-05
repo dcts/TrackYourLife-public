@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Track Your Life</title>
+    <link rel="stylesheet" href="css/basics.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/main-wrapper.css">
+    <link rel="stylesheet" href="css/card-grid.css">
+    <link rel="stylesheet" href="css/temp-controls.css">
+    <!-- PWA: hide navbar of safari on iOS when launched from homescreen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- FAVICON -->
+    <link rel='shortcut icon' type='image/x-icon' href='img/favicon.png' />
+    <!-- FAVICONS WHEN SAVED TO HOMESCREEN (iPhone) -->
+    <!-- see here: https://webdesign.tutsplus.com/articles/quick-tip-give-your-website-an-ios-home-screen-icon--webdesign-10067 -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/logo2.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/logo2.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/logo2.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/logo2.png">
+    <!-- CUSTOM SPASH SCREENS -->
+    <!-- made with https://appsco.pe/developer/splash-screens -->
+    <link href="img/splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <script src="js-web-components/webcomponents-bundle.js"></script>
+    <script src="js-web-components/mycardgoals.js"></script>
+    <script src="js-web-components/mycard.js"></script>
+    <div class="main-wrapper">
+      <!-- NAVBAR -->
+      <div class="navbar">
+        <img class="fire-icon" src="img/icons/analysis.png" alt="">
+        <div class="first-row">
+          <div onclick="decreaseDate();" class="chevron-button-area flex justify-center pointer" style="width: 50px;">
+            <img src="img/icons/chevron-left.svg" alt="left arrow">
+          </div>
+          <div class="calendar-text" onclick="window.location.reload(false);">
+            <p class="title inject-date-title">Today</p>
+            <p class="date inject-date"></p>
+          </div>
+          <div onclick="increaseDate();" class="chevron-button-area flex justify-center pointer" style="width: 50px;">
+            <img src="img/icons/chevron-right.svg" alt="right arrow">
+          </div>
+        </div>
+        <div class="second-row">
+          <i class="far fa-check-circle"></i>
+          <i class="far fa-check-circle"></i>
+          <i class="far fa-check-circle"></i>
+          <i class="far fa-check-circle"></i>
+          <i class="far fa-check-circle"></i>
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="content">
+        <!-- water (card1) -->
+        <my-card id="water"></my-card>
+        <!-- meditation (card2) -->
+        <my-card id="meditation"></my-card>
+        <!-- jogging (card3) -->
+        <my-card id="jogging"></my-card>
+        <!-- gym (card4) -->
+        <my-card id="gym"></my-card>
+        <!-- goals (card5) -->
+        <my-card-goals id="goals"></my-card-goals>
+        <!-- weight (card6) -->
+        <div class="temp-controls">
+          <img class="controls-chevron" onclick="decreaseDate();" src="img/icons/chevron-left.svg" alt="">
+          <img class="controls-chevron" onclick="increaseDate();" src="img/icons/chevron-right.svg" alt="">
+        </div>
+        <!-- <my-card-weight id="weight"></my-card-weight> -->
+        <!-- <my-card id="weight"></my-card> -->
+      </div>
+    </div>
+
+    <script defer src="js/progressBarChecks.js"></script>
+    <script defer src="js/initWebComponents.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+    <script src="js/firebaseInit.js"></script>
+  </body>
+</html>

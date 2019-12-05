@@ -1,0 +1,24 @@
+.content {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  grid-column-gap: 14px;
+  grid-row-gap: 14px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.content > .card {
+  background-color: white;
+  box-shadow: 0 0 14px rgba(0,0,0,0.1);
+  border-radius: 14px;
+  text-align: center;
+  font-size: 30px;
+  height: 50vh;
+  max-height: 168px;
+  width: 50vw;
+  max-width: 156px;
+}
+.content > my-card {
+
+}

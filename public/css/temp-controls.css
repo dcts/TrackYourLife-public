@@ -1,0 +1,15 @@
+.temp-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  max-height: 168px;
+  width: 50vw;
+  max-width: 156px;
+}
+img.controls-chevron {
+  width: 60px;
+  margin: 0px;
+  cursor: pointer;
+  opacity: 0.2;
+}

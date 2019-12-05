@@ -1,0 +1,56 @@
+.navbar {
+  height: 89px;
+  background-color: white;
+  box-shadow: 0 0 14px rgba(0,0,0,0.1);
+  /*position: fixed;*/
+  /*top: 0;*/
+  width: 100vw;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+img.fire-icon {
+  position: absolute;
+  right: 0px;
+  width: 50px;
+  padding: 20px;
+}
+.first-row {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.chevron-button-area {
+  opacity: 0;
+}
+
+.calendar-text {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.calendar-text p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.calendar-text > .title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.second-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+.second-row > i {
+  margin-left: 3px;
+  margin-right: 3px;
+  font-size: 25px;
+  color: #e1e1e1;
+  transition: all 1.5s ease;
+}
+.second-row > i.active {
+  color: #77c44c;
+}

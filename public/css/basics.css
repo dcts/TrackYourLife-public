@@ -1,0 +1,86 @@
+/*
+ * BASICS
+ * reusable basic classes that are widely used
+ * by dcts (github.com/dcts)
+ */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
+
+body {
+  margin: 0 auto;
+  background-color: #F9F9F9;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/*
+ * Text
+ */
+.center {
+  text-align: center;
+}
+.fit-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*
+ * Position
+ */
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.pos-absolute {
+  position: absolute;
+}
+.pos-relative {
+  position: relative;
+}
+.kill-margin {
+  margin: 0px !important;
+}
+
+/*
+ * links
+ */
+.pointer {
+  cursor: pointer;
+}
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*
+ * Visibility
+ */
+.hidden {
+  visibility: hidden;
+}
+.collapsed {
+  visibility: collapse;
+}
+.transparent {
+  opacity: 0;
+}
+
+/*
+ * Forms
+ * nicer formatting (like bootstrap)
+ */
+/*input, select {
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 4px 8px;
+  background-color: white;
+}*/
