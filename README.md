@@ -2,6 +2,8 @@
 
 personal app to track health, meditation, sports and other goals.
 
+<img height="600px" src="https://user-images.githubusercontent.com/44790691/105927254-ebcba800-6043-11eb-92ed-e8d21cb103de.gif"/>
+
 ### Database & Hosting
 - you need a firebase account and the [firebase CLI tools](https://github.com/firebase/firebase-tools). `npm install -g firebase-tools`
 - you will need to setup a custom firebase project.
